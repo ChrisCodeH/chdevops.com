@@ -1,2 +1,93 @@
-<h1>Hello World!</h1>
-<h2>Site coming soon!</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chdevops.com</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector("body").insertAdjacentHTML("afterbegin", data);
+                });
+        });
+    </script>
+</head>
+<body>
+    <!-- The header will be dynamically loaded here -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome..</h1>
+            <p>..To a random mish-mash of various learning and lessons from a still sane DevOps professional (for now)</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2>Latest Posts</h2>
+        <div class="posts">
+            <!-- Post 1 -->
+            <article class="post">
+                <div class="post-image">
+                    <img src="/img/cloud-python.png" alt="Blog Post Image">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">March 15, 2025 • 5 min read</div>
+                    <h2>Backup Git Using AWS Lambda</h2>
+                    <p>How to leverage the cloud to backup your codebase for business continuity</p>
+                    <a href="/posts/github-backup-lambda.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            
+            <!-- Post 2 -->
+            <article class="post">
+                <div class="post-image">
+                    <img src="https://cdn.cookielaw.org/logos/65d468e3-eb79-4f86-a922-a60629ae9cea/d359ce97-dcc5-4bd5-be4b-b1634e13811d/c5c72796-7007-4aa1-8ccd-19e33fee42b5/Wiz-Logo-Black-1238x760.png" alt="Blog Post Image">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">March 10, 2025 • 8 min read</div>
+                    <h2>Wiz.io - Implementation & Review</h2>
+                    <p>A quick look at Wiz and how it stacks up to the competition</p>
+                    <a href="post.html" class="read-more">Read More</a>
+                </div>
+            </article>
+            
+            <!-- Post 3 -->
+            <article class="post">
+                <div class="post-image">
+                    <img src="https://backstage.io/assets/images/com0027.Dynatrace.Adopter-76144e319e5924be0cda3c36695735e2.png" alt="Blog Post Image">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">March 5, 2025 • 6 min read</div>
+                    <h2>Dynatrace</h2>
+                    <p>It's not datadog.</p>
+                    <a href="post.html" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <!-- Post 4 -->
+            <article class="post">
+                <div class="post-image">
+                    <img src="/img/mini-pc.png" alt="Blog Post Image">
+                </div>
+                <div class="post-content">
+                    <div class="post-meta">March 5, 2025 • 6 min read</div>
+                    <h2>Home Server</h2>
+                    <p>Let's break everything and start again</p>
+                    <a href="post.html" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!--<p>&copy; 2025 Tech Blog. All rights reserved.</p>-->
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
